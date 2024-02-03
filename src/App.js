@@ -7,7 +7,6 @@ import jsondata from "./data/2023Bahrain.json"
 function App() {
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(0);
-
   function getData(index) {
     return jsondata.data[index].data;
   }
@@ -20,7 +19,11 @@ function App() {
   
 
   function handleChange() {
-    setIndex(index + 1);
+    setTimeout(() => {
+      setIndex(index + 1);
+    }, 200
+
+    )
     const data = getData(index);
 
     setData([...data]);
