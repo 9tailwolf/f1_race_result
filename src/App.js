@@ -1,23 +1,56 @@
-import logo from './logo.svg';
+import { React, useState, useEffect } from "react";
+import ChartRace from "./ChartRace.js";
 import './App.css';
 
+import jsondata from "./data/2023Bahrain.json"
+
 function App() {
+  const [data, setData] = useState([]);
+  const [index, setIndex] = useState(0);
+
+  function getData(index) {
+    return jsondata.data[index].data;
+  }
+
+  function getLap(index) {
+    return jsondata.data[index].lap;
+  }
+
+  // read data function
+  
+
+  function handleChange() {
+    setIndex(index + 1);
+    const data = getData(index);
+
+    setData([...data]);
+  }
+
+  useEffect(() => {
+    const data = getData(0);
+
+    setData([...data]);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class='inner_div'>
+      <button onClick={handleChange}>Click Me!</button>
+      <h1>{getLap(index)}</h1>
+
+      <ChartRace
+        data={data}
+        backgroundColor="#000"
+        width={760}
+        padding={12}
+        itemHeight={20}
+        gap={12}
+        titleStyle={{ font: "normal 400 13px Arial", color: "#fff" }}
+        valueStyle={{
+          font: "normal 400 11px Arial",
+          color: "rgba(255,255,255, 0.42)"
+        }}
+      />
+
     </div>
   );
 }
