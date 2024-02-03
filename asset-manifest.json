@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/9tailwolf/f1_race_result/static/css/main.0eb4c4a1.css",
-    "main.js": "/9tailwolf/f1_race_result/static/js/main.d3f9ebf1.js",
-    "index.html": "/9tailwolf/f1_race_result/index.html",
-    "main.0eb4c4a1.css.map": "/9tailwolf/f1_race_result/static/css/main.0eb4c4a1.css.map",
-    "main.d3f9ebf1.js.map": "/9tailwolf/f1_race_result/static/js/main.d3f9ebf1.js.map"
+    "main.css": "./static/css/main.9475301b.css",
+    "main.js": "./static/js/main.e35a9061.js",
+    "index.html": "./index.html",
+    "main.9475301b.css.map": "./static/css/main.9475301b.css.map",
+    "main.e35a9061.js.map": "./static/js/main.e35a9061.js.map"
   },
   "entrypoints": [
-    "static/css/main.0eb4c4a1.css",
-    "static/js/main.d3f9ebf1.js"
+    "static/css/main.9475301b.css",
+    "static/js/main.e35a9061.js"
   ]
 }
