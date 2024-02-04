@@ -2,7 +2,9 @@ import { React, useState, useEffect} from "react";
 import ChartRace from "./ChartRace.js";
 import './App.css';
 
-import jsondata from "./data/2023Bahrain.json"
+
+// data
+import jsondata from "./data/2023Italy.json";
 
 function App() {
   const [data, setData] = useState([]);
@@ -64,6 +66,8 @@ function App() {
     setIndex(1);
     setAbsoluteActive(true);
     setIsActive(false);
+    const data = getData(index);
+    setData([...data]);
   };
 
   return (
