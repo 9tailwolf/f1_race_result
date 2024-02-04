@@ -67,28 +67,29 @@ function App() {
   };
 
   return (
-
     <div class='inner_div'>
+      <center>
       <button onClick={handleStart}>Start</button>
       <button onClick={handlePause}>Pause</button>
       <button onClick={handleReset}>Reset</button>
       <h1>{getLap(index)}</h1>
-
+      </center>
       <ChartRace
         data={data}
-        backgroundColor="#ffffff"
-        width={760}
+        backgroundColor="#000"
+        width={800}
         padding={12}
         itemHeight={20}
         gap={12}
-        titleStyle={{ font: "normal 400 13px Arial", color: "#000" }}
+        titleStyle={{ font: "normal 400 13px Arial", color: "#fff" }}
         valueStyle={{
           font: "normal 400 11px Arial",
-          color: "rgba(0,0,0, 0.42)"
+          color: "rgba(255,255,255, 0.42)",
         }}
       />
 
     </div>
+    
   );
 }
 

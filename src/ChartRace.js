@@ -53,5 +53,5 @@ ChartRace.defaultProps = {
 	itemHeight: 38,
 	gap: 4,
 	titleStyle: { font: 'normal 400 13px Arial', color: '#212121' },
-	valueStyle: { font: 'normal 400 11px Arial', color: '#777' }
+	valueStyle: { font: 'normal 400 11px Arial', color: '#777'}
 };
