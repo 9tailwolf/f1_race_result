@@ -66,7 +66,7 @@ function App() {
     setIndex(1);
     setAbsoluteActive(true);
     setIsActive(false);
-    const data = getData(index);
+    const data = getData(0);
     setData([...data]);
   };
 
