@@ -4,21 +4,18 @@ import './App.css';
 
 
 // data
-import jsondata from "./data/2023Italy.json";
-
+import jsondata from "./data/data.json";
 function App() {
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(1);
   const [isActive, setIsActive] = useState(false);
   const [absoluteActive, setAbsoluteActive] = useState(true);
-  
-
   function getData(index) {
-    return jsondata.data[index].data;
+    return jsondata[2023][jsondata[2023]['circuits'][1]].data[index].data;
   }
 
   function getLap(index) {
-    return jsondata.data[index-1].lap;
+    return jsondata[2023][jsondata[2023]['circuits'][1]].data[index-1].lap;
   }
 
   function handleChange() {
@@ -48,7 +45,7 @@ function App() {
       clearInterval(index);
     }
     
-    if(index === jsondata.end - 1) {
+    if(index === jsondata[2023][jsondata[2023]['circuits'][1]].end - 1) {
       setAbsoluteActive(false);
     }
     return () => clearInterval(id);
@@ -81,7 +78,7 @@ function App() {
       <ChartRace
         data={data}
         backgroundColor="#000"
-        width={800}
+        width={"100%"}
         padding={12}
         itemHeight={20}
         gap={12}
