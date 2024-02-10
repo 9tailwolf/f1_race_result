@@ -44,6 +44,8 @@ I use [react](https://ko.legacy.reactjs.org) for web page, and published by [giu
 
 I use [react-select](https://github.com/jedwatson/react-select) for select box. And I refer [CSS Scan](https://getcssscan.com/css-buttons-examples) page for button.
 
+### **Update History**
 
-- **0.1.0 Beta** : Feb 12th, 2024
+
+#### **0.1.0 Beta** : Feb 12th, 2024
     - Published on a web page.
