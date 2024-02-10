@@ -1,12 +1,12 @@
 # 🏎️ Formula1 Race Result (0.1.0 Beta)
-You can see this project at [http://f1raceresult.xyz](http://f1raceresult.xyz)
-Project description at [http://9tailwolf.com/playground/f1/raceresult](http://9tailwolf.com/playground/f1/raceresult)
+You can see this project at [http://f1raceresult.xyz](http://f1raceresult.xyz) (optimized for laptop or desktop screens.)
+
+Project descriptions at [http://9tailwolf.com/playground/f1/raceresult](http://9tailwolf.com/playground/f1/raceresult)
 
 `f1_race_result` is my **first front-end project** that summarizes Formula1 race results by `bar-chart-race`. For now, you can see all race results after 2022.
 
-The above site is optimized for laptop or desktop screens.
 
-Please send all `bug reports` by email here.
+Please send all `bug reports` or `Questions` by email here.
 
 doryeon514@gm.gist.ac.kr / doryeon514@gmail.com
 
