@@ -86,3 +86,14 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.linkid {
+  color: white;
+  text-decoration: none;
+}
+
+.linkid:hover {
+  color: #6996FF;
+  cursor: pointer;
+  text-decoration: none
+}

@@ -193,7 +193,7 @@ function App() {
         }}
       />
       </div>
-      <p style={{fontFamily: 'Arial, sans-serif',fontSize:"15px", color:"#999999",textAlign:"center"}}> This page is for desktop and laptop environments. For any bugs or reports, send email : <span style={{color:"#18E7CF"}}>doryeon514@gm.gist.ac.kr</span> or <span style={{color:"#18E7CF"}}>doryeon514@gmail.com</span>. </p>
+      <p style={{fontFamily: 'Arial, sans-serif',fontSize:"15px", color:"#999999",textAlign:"center"}}> This page is for desktop and laptop environments. For any bugs or reports, please send email : <span style={{color:"#18E7CF"}}>doryeon514@gm.gist.ac.kr</span> or <span style={{color:"#18E7CF"}}>doryeon514@gmail.com</span>. </p>
       <p style={{fontFamily: 'Arial, sans-serif',fontSize:"15px", color:"#999999",textAlign:"center",margin:"10px"}}> <a href='https://github.com/9tailwolf/f1_race_result' style={{color:"#18E7CF",textDecoration:"none"}}><FaGithub/> GitHub Repository</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://9tailwolf.com/playground/f1/raceresult' style={{color:"#18E7CF",textDecoration:"none"}}><FaBookOpen/> Project Description</a> </p>
       <div style={{margin:"20px"}}></div>
     </div>
