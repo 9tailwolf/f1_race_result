@@ -3,7 +3,7 @@ import Select from "react-select";
 import ChartRace from "./ChartRace.js";
 import './App.css';
 import jsondata from "./data/data.json";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaBookOpen } from "react-icons/fa";
 
 const customStyles = {
       control: (provided) => ({
@@ -144,7 +144,7 @@ function App() {
   return (
     <div class='inner_div'>
       <center>
-      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"50px"}}>🏎️ Formula1 Race Results</p>
+      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"50px",margin:"0px"}}>🏎️ Formula1 Race Results <span style={{fontSize:"25px",color:"#18E7CF"}}>0.1.0-beta</span></p>
       <div style={{margin:20, width:"8%",whiteSpace:"nowrap"}}>
       <Select 
         styles={customStyles}
@@ -193,10 +193,12 @@ function App() {
         }}
       />
       </div>
+      <p style={{fontFamily: 'Arial, sans-serif',fontSize:"15px", color:"#999999",textAlign:"center"}}> This page is for desktop and laptop environments. For any bugs or reports, send email : <span style={{color:"#18E7CF"}}>doryeon514@gm.gist.ac.kr</span> or <span style={{color:"#18E7CF"}}>doryeon514@gmail.com</span>. </p>
+      <p style={{fontFamily: 'Arial, sans-serif',fontSize:"15px", color:"#999999",textAlign:"center",margin:"10px"}}> <a href='https://github.com/9tailwolf/f1_race_result' style={{color:"#18E7CF",textDecoration:"none"}}><FaGithub/> GitHub Repository</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='https://9tailwolf.com/playground/f1/raceresult' style={{color:"#18E7CF",textDecoration:"none"}}><FaBookOpen/> Project Description</a> </p>
+      <div style={{margin:"20px"}}></div>
     </div>
     
   );
 }
-
 export default App;
 
