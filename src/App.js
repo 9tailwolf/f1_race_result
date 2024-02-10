@@ -40,7 +40,6 @@ const customStyles = {
       }),
     };
 
-// data
 function App() {
   const [data, setData] = useState(jsondata[2023][jsondata[2023]['circuits'][0]].data[0].data);
   const [lap, setLap] = useState(jsondata[2023][jsondata[2023]['circuits'][0]].data[0].lap);
@@ -79,7 +78,7 @@ function App() {
   function yearChange(value) {
     setYearValue(value);
     setYear(value);
-    setCircuitOption(jsondata[year].circuits_option);
+    setCircuitOption(jsondata[value].circuits_option);
   }
 
 
@@ -90,6 +89,11 @@ function App() {
   }
 
   useEffect(() => {
+    setCircuitValue(jsondata[year]['circuits'][0]);
+    setCircuit(jsondata[year]['circuits'][0]);
+  }, [year]) 
+
+  useEffect(() => {
     const data = getData(0);
     const lap = getLap(0);
     setData([...data]);
@@ -98,7 +102,6 @@ function App() {
   }, [circuit]) 
 
   useEffect(() => {
-    console.log(index, isActive,absoluteActive);
     let id;
     if (isActive && absoluteActive){
     id = setInterval(() => {
@@ -141,7 +144,7 @@ function App() {
   return (
     <div class='inner_div'>
       <center>
-      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"50px"}}>🏎️ Fomular1 Race Results</p>
+      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"50px"}}>🏎️ Formula1 Race Results</p>
       <div style={{margin:20, width:"8%",whiteSpace:"nowrap"}}>
       <Select 
         styles={customStyles}
