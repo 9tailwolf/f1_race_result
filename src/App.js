@@ -175,7 +175,7 @@ function App() {
       
       <center>
       <div style={{margin:"20px"}}></div>
-      <h1 style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',display:'inline',fontSize:"2rem"}}>{circuit}</h1>
+      <h1 style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',display:'inline',fontSize:"1rem",padding:"20px 20px"}}>{circuit}</h1>
       <div style={{margin:"10px"}}></div>
       <div style={{margin:"1rem",width:"90%"}}>
       <h1 style={{color:"#18E7CF",fontFamily: 'Arial, sans-serif',display:'inline',margin:"30px",fontSize:"1rem"}}>{lap.slice(0,3)!=='1 L' ? lap.slice(0,-8) : lap.slice(0,-10) }</h1>
@@ -209,4 +209,3 @@ function App() {
   );
 }
 export default App;
-

@@ -1,9 +1,9 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import './styleChart.css';
 
 export default class ChartRace extends Component{
+
 	constructor(props){
-		
 		super(props);
 		this.state = {
 			data: this.props.data.sort((a,b) => a.value - b.value),
@@ -22,15 +22,15 @@ export default class ChartRace extends Component{
 	}
 
 	draw(item, index){
-		let viewportWidth = window.outerWidth * this.props.width;
 		const indis = this.state.temp.findIndex(temp => temp.id === item.id );
+		const viewportWidth = window.innerWidth * 0.78;
 		const translateY = indis === 0 ? this.props.paddingy : ( this.props.paddingy + ( indis * this.props.itemHeight ) + ( indis * this.props.gap ) );
 		return(
 			<div key={index} className="raceItem" style={{ height: this.props.itemHeight, transform: 'translateY('+ translateY +'px) translateX('+ this.props.padding +'px)' }}>
-				<b style={{ backgroundColor: item.color, width: item.value / this.state.maxValue * ( viewportWidth - ( 2 * this.props.paddingbar ) ) }}></b>
+				<b style={{ backgroundColor: item.color, width: (item.value / this.state.maxValue * ( viewportWidth - ( 2 * this.props.paddingbar ) )) }}></b>
 				<span>
 					<em style={this.props.titleStyle}>{ item.title }</em>
-					<i style={this.props.valueStyle}>{ "+" + item.value + " sec"}</i>
+					<i style={this.props.valueStyle}>{ item.value + " sec"}</i>
 				</span>
 			</div>
 		);
@@ -55,7 +55,7 @@ ChartRace.defaultProps = {
 	paddingbar: 20,
 	itemHeight: 38,
 	gap: 4,
-	titleStyle: { font: 'normal 400 9px Arial', color: '#212121' },
-	valueStyle: { font: 'normal 400 7px Arial', color: '#777'}
+	titleStyle: { font: 'normal 400 13px Arial', color: '#212121' },
+	valueStyle: { font: 'normal 400 11px Arial', color: '#777'}
 };
 

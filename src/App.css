@@ -48,29 +48,28 @@
 .button-27 {
   appearance: none;
   background-color: #000000;
-  border: 0.1rem solid #18E7CF;
-  border-radius: 0.5rem;
+  border: 2px solid #18E7CF;
+  border-radius: 15px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 0.5rem;
+  font-size: 18px;
   font-weight: 600;
   line-height: normal;
   margin: 1%;
   min-height: 10px;
-  min-width: 50px;
+  min-width: 0;
   outline: none;
-  padding: 0.2rem 0.3rem;
+  padding: 16px 24px;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 15%;
-  height: 5%;
+  width: 20%;
   will-change: transform;
 }
 
