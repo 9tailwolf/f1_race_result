@@ -14,6 +14,7 @@ const customStyles = {
         height: "40px",
         textAlign: "center",
         fontFamily: 'Arial, sans-serif',
+        fontSize: "15px", 
         backgroundColor: 'black',
         flexWrap: 'nowrap',
       }),
@@ -144,8 +145,8 @@ function App() {
   return (
     <div class='inner_div'>
       <center>
-      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"50px",margin:"0px"}}>🏎️ Formula1 Race Results <span style={{fontSize:"25px",color:"#18E7CF"}}>0.1.0-beta</span></p>
-      <div style={{margin:20, width:"8%",whiteSpace:"nowrap"}}>
+      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"2.5rem",margin:"0px"}}>🏎️ Formula1 Race Results <span style={{fontSize:"1rem",color:"#18E7CF"}}>0.1.0-beta</span></p>
+      <div style={{margin:20, width:"8vw", minWidth:"100px"}}>
       <Select 
         styles={customStyles}
           className="selectItem"
@@ -156,7 +157,7 @@ function App() {
             return option.value === yearValue;
           })}
       /></div>
-      <div style={{margin:20, width:"40%",whiteSpace:"nowrap"}}>
+      <div style={{margin:20, width:"40vw",minWidth:"300px"}}>
       <Select
           styles={customStyles}
           className="selectItem"
@@ -170,25 +171,32 @@ function App() {
       </div>
       </center>
       <div style={{margin:"20px"}}></div>
-      <div style={{border:"2px solid #18E7CF",margin:"auto",width:"88%"}}>
+      <div style={{border:"2px solid #18E7CF",margin:"auto",width:"95%"}}>
+      
       <center>
-      <h1 style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',display:'inline',margin:"10%"}}>{lap.slice(0,-8)}</h1>
+      <div style={{margin:"20px"}}></div>
+      <h1 style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',display:'inline',fontSize:"2rem"}}>{circuit}</h1>
+      <div style={{margin:"10px"}}></div>
+      <div style={{margin:"1rem",width:"90%"}}>
+      <h1 style={{color:"#18E7CF",fontFamily: 'Arial, sans-serif',display:'inline',margin:"30px",fontSize:"1rem"}}>{lap.slice(0,3)!=='1 L' ? lap.slice(0,-8) : lap.slice(0,-10) }</h1>
       <button className="button-27" onClick={handleStart}>Start</button>
       <button className="button-27" onClick={handlePause}>Pause</button>
       <button className="button-27" onClick={handleReset}>Reset</button>
+      </div>
       </center>
+      
       <ChartRace
         data={data}
         backgroundColor="#000"
-        width={"100%"}
+        width={0.75}
         padding={20}
         paddingy={0}
-        paddingbar={4}
+        paddingbar={1}
         itemHeight={20}
         gap={12}
-        titleStyle={{ font: "normal 400 13px Arial", color: "#fff" }}
+        titleStyle={{ font: "normal 400 9px Arial", color: "#fff" }}
         valueStyle={{
-          font: "normal 400 11px Arial",
+          font: "normal 400 7px Arial",
           color: "rgba(255,255,255, 0.42)",
         }}
       />
