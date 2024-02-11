@@ -50,6 +50,7 @@ I use [react-select](https://github.com/jedwatson/react-select) for select box. 
 - Tyding code.
 - Updata all race data.
 - Automate data processing through the API within the js file.
+- Build Router for publish by html format.
 
 
 ### **Update History**
