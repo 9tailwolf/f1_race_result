@@ -145,7 +145,7 @@ function App() {
   return (
     <div class='inner_div'>
       <center>
-      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"2.5rem",margin:"0px"}}>🏎️ Formula1 Race Results <span style={{fontSize:"1rem",color:"#18E7CF"}}>0.1.0-beta</span></p>
+      <p style={{color:"#ffffff",fontFamily: 'Arial, sans-serif',fontSize:"2.5rem",margin:"0px"}}>🏎️ Formula1 Race Results <span style={{fontSize:"1rem",color:"#18E7CF"}}>0.1.1-beta</span></p>
       <div style={{margin:20, width:"8vw", minWidth:"100px"}}>
       <Select 
         styles={customStyles}
