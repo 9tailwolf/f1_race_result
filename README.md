@@ -50,10 +50,13 @@ I use [react-select](https://github.com/jedwatson/react-select) for select box. 
 - Tyding code.
 - Updata all race data.
 - Automate data processing through the API within the js file.
-- Built it to work well in a mobile environment.
 
 
 ### **Update History**
+
+#### **v0.1.1-beta** : Feb 11th, 2024
+- Optimize to publish well in a mobile environment.
+- 
 
 #### **0.1.0 Beta** : Feb 10th, 2024
 - Published on a web page([http://f1raceresult.xyz](http://f1raceresult.xyz)).
