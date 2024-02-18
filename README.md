@@ -1,4 +1,4 @@
-# 🏎️ Formula1 Race Result (v0.1.1-beta)
+# 🏎️ Formula1 Race Result (v0.1.2-beta)
 You can see this project at [http://f1raceresult.xyz](http://f1raceresult.xyz) (optimized for laptop or desktop screens.)
 
 Project descriptions at [http://9tailwolf.com/playground/f1/raceresult](http://9tailwolf.com/playground/f1/raceresult)
