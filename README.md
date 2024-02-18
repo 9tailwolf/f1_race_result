@@ -56,6 +56,10 @@ I use [react-select](https://github.com/jedwatson/react-select) for select box. 
 
 ### **Update History**
 
+#### **v0.1.2-beta** : Feb 19th, 2024
+- Add retired state
+- Add 2021 year race chart
+
 #### **v0.1.1-beta** : Feb 11th, 2024
 - Optimize to publish well in a mobile environment.
 - Add title of f1 events
