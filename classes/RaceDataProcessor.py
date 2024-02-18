@@ -12,7 +12,6 @@ class RaceDataProcessor:
     def getGaptoAnother(self, driver_name):
         gap_result = []
         driver_laps = self.race.laps.pick_driver(driver_name).reset_index()
-        print(driver_name)
         for i in range(self.race.total_laps):
             for sector in ["Sector1SessionTime", "Sector2SessionTime", "Sector3SessionTime"]:
                 try:
@@ -35,20 +34,32 @@ class RaceDataProcessor:
     def getGapDictionary(self):
         corrected_dataframe = pandas.DataFrame({num:self.getGaptoAnother(num) for num in self.drivers}).fillna(method='ffill').transpose()
         Columns = ['Driver Name', 'Team Name'] + [str((i + 3) // 3) + ' Laps ' + str(i%3+1) + ' Sector'  for i in range(self.race.total_laps * 3)]
+        
         corrected_dataframe.columns = Columns
         self.df = corrected_dataframe
         self.json = []
         last = ""
         ldata = {}
         for i in self.df.columns[2:]:
+            l = self.df[i].to_list()
+            m = max(l) + 5
+            for d in range(len(l)):
+                if l[d]==-1:
+                    l[d] = m
+            self.df[i] = l
             data = []
             for num in self.drivers:
                 d = self.race.get_driver(num)
-                if self.df[i][num]!= -1:
-                    d = {'id':num,'title':d['Abbreviation'],'value':round(self.df[i][num],3),'color':'#'+d['TeamColor']}
+                if d['ClassifiedPosition']=='W':
+                    continue
+                if self.df[i][num]!= m:
+                    d = {'id':num,'title':d['Abbreviation'],'value':float(round(self.df[i][num],3)),'color':'#'+d['TeamColor']}
                     data.append(d)
                     ldata[num] = round(self.df[i][num],3)
-
+                else:
+                    d = {'id':num,'title':d['Abbreviation'],'value':float(round(self.df[i][num],3)),'color':'#'+'777777'}
+                    data.append(d)
+                    ldata[num] = round(self.df[i][num],3)
             self.json.append({'lap':i,'data':data})
             last = i
 
@@ -57,18 +68,22 @@ class RaceDataProcessor:
         res[self.drivers[0]] = res[self.drivers[0]] - res[self.drivers[0]]
         for num in self.drivers:
             d = self.race.get_driver(num)
+            if d['ClassifiedPosition']=='W':
+                continue
             if self.race.results['Status'][num]=='Finished':
                 value = round(res[num].total_seconds(), 3)
+                c = '#' + d['TeamColor']
             elif self.race.results['Status'][num][0]=='+':
                 value = ldata[num]
+                c = '#' + d['TeamColor']
             else:
-                continue
+                value = ldata[num]
+                c = '#777777'
             d = {'id': num, 'title': d['Abbreviation'], 'value':value ,
-                 'color': '#' + d['TeamColor']}
+                 'color':c}
             data.append(d)
 
         self.json.append({'lap':last, 'data': data})
-
 
         return {"data":self.json,"end":self.race.total_laps * 3 + 1}
 

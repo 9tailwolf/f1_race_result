@@ -50,7 +50,3 @@ class DataSaver:
             pass
         with open('./data/' + str(self.file) + '.json', 'w') as data:
              json.dump(self.data, data, indent=4)
-
-
-
-

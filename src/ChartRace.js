@@ -25,15 +25,28 @@ export default class ChartRace extends Component{
 		let viewportWidth = window.outerWidth * this.props.width;
 		const indis = this.state.temp.findIndex(temp => temp.id === item.id );
 		const translateY = indis === 0 ? this.props.paddingy : ( this.props.paddingy + ( indis * this.props.itemHeight ) + ( indis * this.props.gap ) );
+		if (item.color==='#777777'){
 		return(
 			<div key={index} className="raceItem" style={{ height: this.props.itemHeight, transform: 'translateY('+ translateY +'px) translateX('+ this.props.padding +'px)' }}>
 				<b style={{ backgroundColor: item.color, width: item.value / this.state.maxValue * ( viewportWidth - ( 2 * this.props.paddingbar ) ) }}></b>
 				<span>
 					<em style={this.props.titleStyle}>{ item.title }</em>
-					<i style={this.props.valueStyle}>{ "+" + item.value + " sec"}</i>
+					<i style={this.props.valueStyle}>{"Retired"}</i>
 				</span>
 			</div>
 		);
+		}
+		else {
+			return(
+				<div key={index} className="raceItem" style={{ height: this.props.itemHeight, transform: 'translateY('+ translateY +'px) translateX('+ this.props.padding +'px)' }}>
+					<b style={{ backgroundColor: item.color, width: item.value / this.state.maxValue * ( viewportWidth - ( 2 * this.props.paddingbar ) ) }}></b>
+					<span>
+						<em style={this.props.titleStyle}>{ item.title }</em>
+						<i style={this.props.valueStyle}>{ "+" + item.value + " sec"}</i>
+					</span>
+				</div>
+			);
+		}
 	}
 
 	render(){
